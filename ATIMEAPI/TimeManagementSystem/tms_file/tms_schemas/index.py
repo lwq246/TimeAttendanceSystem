@@ -1,0 +1,7 @@
+from tms_file.tms_schemas.clocking_data import ClockingData
+from tms_file.tms_schemas.shift_master import ShiftMaster
+from tms_file.tms_schemas.shiftdetail import ShiftDetail
+from tms_file.tms_schemas.shiftsection import ShiftSection
+from tms_file.tms_schemas.workcalendar import WorkCalendar
+from tms_file.tms_schemas.workpattern_details import WorkPattern_detail
+from tms_file.tms_schemas.wrkpattern import WorkPattern
