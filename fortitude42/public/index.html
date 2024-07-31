@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+		<base href="../" />
+        <title>Fortitude 42</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Fortitude 42 - Develop the Future" />
+        <meta name="keywords" content="Fortitude 42, React, Node.js, web design, web development"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />    
+        <meta name="theme-color" content="#000000" />   
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Fortitude 42 - Develop the Future" />
+        <meta property="og:url" content="https://fortitude-42.ddns.net/"/>
+        <meta property="og:site_name" content="Fortitude 42 by Jasper" />
+        <link rel="canonical" href="https://fortitude-42.ddns.net/"/>
+        <link rel="icon" href="%PUBLIC_URL%/static/media/icons/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/> 
+        <link rel="stylesheet" href="%PUBLIC_URL%/static/css/style.bundle.css" type="text/css"/>
+        <link rel="stylesheet" href="%PUBLIC_URL%/static/plugins/global/plugins.bundle.css" type="text/css"/>
+        
+        <!--begin::Vendor Stylesheets(used for this page only)-->
+        <!-- 
+            <link href="%PUBLIC_URL%/static/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css"/>
+            <link href="%PUBLIC_URL%/static/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css"/>
+        -->
+        <!--end::Vendor Stylesheets-->
+        
+        <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+        <!-- 
+            <link href="%PUBLIC_URL%/static/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/> 
+        -->
+        <!--end::Global Stylesheets Bundle-->
+        
+        <script>
+            // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
+            if (window.top != window.self) {
+                window.top.location.replace(window.self.location.href);
+            }
+        </script>    
+
+        <!--
+            manifest.json provides metadata used when your web app is installed on a
+            user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->            
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+        <!--
+            Notice the use of %PUBLIC_URL% in the tags above.
+            It will be replaced with the URL of the `public` folder during the build.
+            Only files inside the `public` folder can be referenced from the HTML.
+
+            Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+            work correctly both with client-side routing and a non-root public URL.
+            Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+    </head>
+    <body id="kt_body" class="app-blank">
+        <!--lsout-partial:partials/_scrolltop.html-->
+        <!--begin::Modals-->
+        <!--
+            layout-partial:partials/modals/_upgrade-plan.html
+            layout-partial:partials/modals/create-app/_main.html
+            layout-partial:partials/modals/_new-target.html
+            layout-partial:partials/modals/_view-users.html
+            layout-partial:partials/modals/users-search/_main.html
+            layout-partial:partials/modals/_invite-friends.html
+        -->
+        <!--end::Modals-->
+
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+
+        <!-- <script>var hostUrl = "%PUBLIC_URL%/static/"; </script> -->
+
+        <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+         
+            <script src="%PUBLIC_URL%/assets/plugins/global/plugins.bundle.js"></script>
+            <script src="%PUBLIC_URL%/assets/js/scripts.bundle.js"></script>
+        
+        <!--end::Global Javascript Bundle-->
+
+        <!--begin::Vendors Javascript(used for this page only)-->
+        <!-- 
+            <script src="%PUBLIC_URL%/static/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+            <script src="%PUBLIC_URL%/static/plugins/custom/datatables/datatables.bundle.js"></script> 
+        -->
+        <!--end::Vendors Javascript-->
+        
+        <!--begin::Custom Javascript(used for this page only)-->
+        <!-- 
+            <script src="%PUBLIC_URL%/static/js/widgets.bundle.js"></script>
+            <script src="%PUBLIC_URL%/static/js/custom/widgets.js"></script>
+            <script src="%PUBLIC_URL%/static/js/custom/apps/chat/chat.js"></script>
+            <script src="%PUBLIC_URL%/static/js/custom/utilities/modals/upgrade-plan.js"></script>
+            <script src="%PUBLIC_URL%/static/js/custom/utilities/modals/create-app.js"></script>
+            <script src="%PUBLIC_URL%/static/js/custom/utilities/modals/new-target.js"></script>
+            <script src="%PUBLIC_URL%/static/js/custom/utilities/modals/users-search.js"></script> 
+        -->
+        <!--end::Custom Javascript-->
+        <!--end::Javascript-->
+
+        <div id="root"></div>
+        <!--
+            This HTML file is a template.
+            If you open it directly in the browser, you will see an empty page.
+
+            You can add webfonts, meta tags, or analytics to this file.
+            The build step will place the bundled scripts into the <body> tag.
+
+            To begin the development, run `npm start` or `yarn start`.
+            To create a production bundle, use `npm run build` or `yarn build`.
+        -->
+    </body>
+</html>
