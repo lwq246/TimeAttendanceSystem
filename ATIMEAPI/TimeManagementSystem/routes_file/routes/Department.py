@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from psycopg2 import IntegrityError
 from config.database import get_db_connection 
-from routes_file.routes_schemas.index import department
+from routes_file.routes_schemas.index import department, getDepartmentName
 from typing import List
 
 router = APIRouter(
@@ -52,6 +52,20 @@ def get_departments(conn = Depends(get_db_connection)):
     cursor = conn.cursor()
     try:
         query = "SELECT * FROM department"
+        cursor.execute(query)
+        departments = cursor.fetchall()
+        cursor.close()
+        if not departments:
+            return {"departments": []}
+        return {"departments": departments}
+    except Exception as e:
+        return {"error": str(e)}
+
+@router.get("/get-departments-name" )
+def get_departments_name(conn = Depends(get_db_connection)):
+    cursor = conn.cursor()
+    try:
+        query = "SELECT department FROM department"
         cursor.execute(query)
         departments = cursor.fetchall()
         cursor.close()

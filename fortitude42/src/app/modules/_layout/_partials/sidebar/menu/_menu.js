@@ -113,7 +113,7 @@ const _menu = () => {
                                     <span className="menu-bullet">
                                         <span className="bullet bullet-dot"></span>
                                     </span>
-                                    <span className="menu-title">Working/Shfit Pattern Setting</span>
+                                    <span className="menu-title">Working/Shit Pattern Setting</span>
                                 </Link>
                                 <Link className="menu-link" to="/calendar-working-team-setting">
                                     <span className="menu-bullet">

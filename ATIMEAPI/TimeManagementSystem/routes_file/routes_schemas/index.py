@@ -1,5 +1,7 @@
 from routes_file.routes_schemas.Company import Company
 from routes_file.routes_schemas.Department import department
+from routes_file.routes_schemas.Department import getDepartmentName
+
 
 from routes_file.routes_schemas.Employee_class.ContactInformation import ContactInformation
 from routes_file.routes_schemas.Employee_class.Employee import EmployeeBase
