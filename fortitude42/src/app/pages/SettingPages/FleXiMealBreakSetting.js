@@ -27,15 +27,15 @@ const FleXiMealBreakSetting = () => {
                                 <div className="col-4 d-flex flex-center flex-start">
                                     <div className="d-flex flex-column gap-4 flex-start w-100">
                                         <div className=" d-flex flex-row-fluid align-items-center w-100">
-                                        <label className="form-label col-3">Branch</label>
+                                        <label className="form-label col-3">FleXi Code</label>
                                         <input
                                             type="text"
                                             className="form-control form-control-solid col-7"
-                                            placeholder="Branch"
+                                            placeholder="Flexi Code"
                                         />
                                         </div>
                                         <div className="d-flex flex-row-fluid align-items-center w-100">
-                                        <label className="form-label col-3">Description</label>
+                                        <label className="form-label col-3">MealBreak</label>
                                         <input
                                             type="text"
                                             className="form-control form-control-solid col-7"
