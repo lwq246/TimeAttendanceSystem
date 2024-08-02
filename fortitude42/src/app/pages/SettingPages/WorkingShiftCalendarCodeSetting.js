@@ -78,8 +78,15 @@ export function WorkingShiftCalendarCodeSetting() {
   return (
     <>
     <MasterPage>
+      {/* begin::Toolbar */}
+      <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
+                    {/* begin::Toolbar container */}
+                    <div id="kt_app_toolbar_container" className="app-container container-xxl d-flex flex-stack">
+                        {/* begin::Page title */}
+                        <h2>Working/Shift Calander Setting</h2>
+                    </div>
+                </div>
     <div className="p-5">
-      <h1>Working/Shift Calendar Code Setting</h1>
       <div
         className="container border border-2 rounded p-5 gy-4 d-flex flex-column "
         style={{ height: "150vh", minHeight: "600px", minWidth: "1000px" }}

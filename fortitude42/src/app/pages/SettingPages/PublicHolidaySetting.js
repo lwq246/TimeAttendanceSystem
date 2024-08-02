@@ -13,6 +13,14 @@ const onChange = (date, dateString) => {
 const  PublicHolidaySetting = () => {
   return (
     <MasterPage>
+      {/* begin::Toolbar */}
+      <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
+                    {/* begin::Toolbar container */}
+                    <div id="kt_app_toolbar_container" className="app-container container-xxl d-flex flex-stack">
+                        {/* begin::Page title */}
+                        <h2>Public Holiday Setting</h2>
+                    </div>
+                </div>
     <div className="d-flex flex-row border">
       <div className="d-flex flex-column flex-row-fluid border p-10">
         <div className="d-flex flex-row-fluid">

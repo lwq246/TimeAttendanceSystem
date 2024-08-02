@@ -15,6 +15,14 @@ export function CalendarWorkingTeamSetting() {
   return (
     <>
      <MasterPage>
+      {/* begin::Toolbar */}
+      <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
+                    {/* begin::Toolbar container */}
+                    <div id="kt_app_toolbar_container" className="app-container container-xxl d-flex flex-stack">
+                        {/* begin::Page title */}
+                        <h2>Calander Working Team Setting</h2>
+                    </div>
+                </div>
         <div className="p-5">
       <ul className="nav nav-tabs nav-line-tabs mb-5 fs-6">
         <li className="nav-item">
