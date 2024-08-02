@@ -9,14 +9,17 @@ import SelectBox from '../components/SelectBox';
 const DepartmentSetting = () => {
     const { logout } = useAuth();
     const [departments, setDepartments] = useState([]);
+    const [filterText, setFilterText] = useState('');
 
     useEffect(() => {
         const fetchDepartments = async () => {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/Department/get-departments-name');
-                console.log('API Response:', response.data);
+                console.log('API Response:', response.data); // Inspect the data structure
                 if (Array.isArray(response.data.departments)) {
-                    setDepartments(response.data.departments);
+                    // Flatten the list of tuples to a list of strings
+                    const departmentNames = response.data.departments.map(dept => dept[0]);
+                    setDepartments(departmentNames);
                 } else {
                     console.error('Unexpected response format:', response.data);
                 }
@@ -27,6 +30,14 @@ const DepartmentSetting = () => {
 
         fetchDepartments();
     }, []);
+
+    const handleFilterChange = (e) => {
+        setFilterText(e.target.value);
+    };
+
+    const filteredDepartments = departments.filter(department =>
+        department.toLowerCase().includes(filterText.toLowerCase())
+    );
 
     return (
         <MasterPage>
@@ -47,11 +58,13 @@ const DepartmentSetting = () => {
                                 <div className="col-4 d-flex flex-center flex-start">
                                     <div className="d-flex flex-column gap-4 flex-start w-100">
                                         <div className="d-flex flex-row-fluid align-items-center w-100">
-                                            <label className="form-label col-3">Branch</label>
+                                            <label className="form-label col-3">Department</label>
                                             <input
                                                 type="text"
                                                 className="form-control form-control-solid col-7"
-                                                placeholder="Branch"
+                                                placeholder="Department"
+                                                value={filterText}
+                                                onChange={handleFilterChange}
                                             />
                                         </div>
                                         <div className="d-flex flex-row-fluid align-items-center w-100">
@@ -59,7 +72,7 @@ const DepartmentSetting = () => {
                                             <input
                                                 type="text"
                                                 className="form-control form-control-solid col-7"
-                                                placeholder="Branch"
+                                                placeholder="Description"
                                             />
                                         </div>
                                     </div>
@@ -94,7 +107,7 @@ const DepartmentSetting = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {departments.map((department, index) => (
+                                {filteredDepartments.map((department, index) => (
                                     <tr key={index}>
                                         <td>
                                             <div className="form-check form-check-custom form-check-solid">
