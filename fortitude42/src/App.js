@@ -21,6 +21,7 @@ import PublicHolidaySetting from './app/pages/SettingPages/PublicHolidaySetting'
 import { ReasonSetting } from './app/pages/SettingPages/ReasonSetting';
 import { WorkingShiftCalendarCodeSetting } from './app/pages/SettingPages/WorkingShiftCalendarCodeSetting';
 import { WorkingShiftPatternSetting } from './app/pages/SettingPages/WorkingShiftPatternSetting';
+import FleXiMealBreakSetting from './app/pages/SettingPages/FleXiMealBreakSetting';
 
 // Modules
 import DashboardPage from './app/modules/dashboard/dashboard';
@@ -58,6 +59,7 @@ function App() {
                     <Route path="/reason-setting" element={<PrivateRoute element={ReasonSetting} />}></Route>
                     <Route path="/employee-rate-and-customer-field-setting" element={<PrivateRoute element={EmployeeRateAndCustomFieldsSetting} />}></Route>
                     <Route path="/clocking-id-setting" element={<PrivateRoute element={ClockingIdSetting} />}></Route>
+                    <Route path="/flexi-meal-break-setting" element={<PrivateRoute element={FleXiMealBreakSetting} />}></Route>
                     <Route path="/overtime-rule-setting" element={<PrivateRoute element={OvertimeRuleSetting} />}></Route>
                 </Routes>
                 <ToastContainer />

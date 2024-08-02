@@ -145,6 +145,12 @@ const _menu = () => {
                                     </span>
                                     <span className="menu-title">Clocking ID Setting</span>
                                 </Link>
+                                <Link className="menu-link" to="/flexi-meal-break-setting">
+                                    <span className="menu-bullet">
+                                        <span className="bullet bullet-dot"></span>
+                                    </span>
+                                    <span className="menu-title">FleXi Meal Break Setting</span>
+                                </Link>
                                 <Link className="menu-link" to="/overtime-rule-setting">
                                     <span className="menu-bullet">
                                         <span className="bullet bullet-dot"></span>
