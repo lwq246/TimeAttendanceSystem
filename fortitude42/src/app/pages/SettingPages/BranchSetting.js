@@ -39,7 +39,7 @@ const BranchSetting = () => {
                                         <input
                                             type="text"
                                             className="form-control form-control-solid col-7"
-                                            placeholder="Branch"
+                                            placeholder="Description"
                                         />
                                         </div>
                                         
