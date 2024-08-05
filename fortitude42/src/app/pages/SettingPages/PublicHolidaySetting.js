@@ -1,9 +1,9 @@
 import { DatePicker } from "antd";
+import React, { useState } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import "rsuite/DateRangePicker/styles/index.css";
 import MasterPage from '../../modules/_layout/_default';
 import SelectBox from '../components/SelectBox';
-
 const { RangePicker } = DatePicker;
 
 const onChange = (date, dateString) => {
@@ -11,6 +11,11 @@ const onChange = (date, dateString) => {
 };
 
 const  PublicHolidaySetting = () => {
+  const [dateState, setDateState] = useState({
+    startDate: new Date(),
+    endDate: new Date()
+  });
+
   return (
     <MasterPage>
       {/* begin::Toolbar */}
@@ -25,20 +30,31 @@ const  PublicHolidaySetting = () => {
       <div className="d-flex flex-column flex-row-fluid border p-10">
         <div className="d-flex flex-row-fluid">
           <div className="d-flex flex-row-fluid">
-            <div className="col-3 d-flex flex-center flex-start">
-              <div className="d-flex flex-column flex-start gap-5">
-                <input
-                  type="text"
-                  className="form-control form-control-solid"
-                  placeholder="Holiday"
-                />
+            <div className="col-4 d-flex flex-center flex-start">
+              <div className="d-flex flex-column flex-start gap-5" style={{width:"85%"}}>
+                
+              <div className=" d-flex flex-row-fluid align-items-center w-100">
+                                        <label className="form-label col-3">Branch</label>
+                                        <input
+                                            type="text"
+                                            className="form-control form-control-solid col-7"
+                                            placeholder="Branch"
+                                        />
+                                        </div>
+                                        <div className=" d-flex flex-row-fluid align-items-center w-100">
+                                        
+                <label className="form-label col-3">Date</label>
                 <DatePicker
                   onChange={onChange}
-                  className="form-control form-control-solid"
+                  className="form-control form-control-solid  col-9"
                   placeholder="Date"
                 />
+                </div>
+                <div className=" d-flex flex-row-fluid align-items-center w-100">
+                                        
+                                        <label className="form-label col-3">Country ID</label>
                 <select
-                  className="form-select form-select-solid"
+                  className="form-select form-select-solid col-9"
                   aria-label="Select example"
                 >
                   <option>Country ID</option>
@@ -46,12 +62,17 @@ const  PublicHolidaySetting = () => {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
-                <RangePicker className="form-control form-control-solid w-100" />
+                </div>
+                <div className=" d-flex flex-row-fluid align-items-center w-100">
+                                        
+                                        <label className="form-label col-3">Date Range</label>
+                <RangePicker className="form-control form-control-solid w-100 col-9" />
+                </div>
               </div>
             </div>
-            <div className="col-4 row">
-              <div className="col-4">
+            <div className="col-1"></div>
+            <div className="col-2 row">
+              <div className="col-6">
                 <div className="form-check form-check-custom form-check-solid me-10">
                   <input
                     className="form-check-input h-30px w-30px mt-2"
@@ -61,7 +82,7 @@ const  PublicHolidaySetting = () => {
                   <label className="form-check-label">Show All</label>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-6">
                 <div className="form-check form-check-custom form-check-solid me-10">
                   <input
                     className="form-check-input h-30px w-30px mt-2"

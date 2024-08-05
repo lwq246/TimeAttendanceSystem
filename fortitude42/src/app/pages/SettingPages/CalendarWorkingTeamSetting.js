@@ -1,7 +1,7 @@
 import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
 import MasterPage from '../../modules/_layout/_default';
-
+import SelectBox from "../components/SelectBox";
 export function CalendarWorkingTeamSetting() {
   const patternCode = [
     { value: "option 1", label: "0900-1800" },
@@ -76,80 +76,73 @@ export function CalendarWorkingTeamSetting() {
               </div>
               <div className=" d-flex mt-5" style={{ height: "70vh" }}>
                 <div className=" overflow-y-auto h-100 w-50 ">
-                  <table className="table table-rounded table-row-bordered border gy-7 gs-7">
+                <div className="w-100 h-100 overflow-y-auto px-10 border">
+                <table className="table table-row-dashed table-row-gray-300 gy-7">
                     <thead>
                       <tr className="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                        <th>Team Code</th>
-                        <th>Description</th>
-                        <th>Pattern Code</th>
-                        <th>Skip Holiday</th>
-                        <th>Year Of</th>
-                        <th>Start Month</th>
-                        <th>End Month</th>
-                        <th>Start Day</th>
+                      <th className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </th>
+                        <th className="text-gray-500">TEAM CODE</th>
+                        <th className="text-gray-500">DESCRIPTION</th>
+                        <th className="text-gray-500">PATTERN CODE</th>
+                        <th className="text-gray-500">SKIP HOLIDAY</th>
+                        <th className="text-gray-500">YEAR OF</th>
+                        <th className="text-gray-500">START MONTH</th>
+                        <th className="text-gray-500">END MONTH</th>
+                        <th className="text-gray-500">START DAY</th>
+                        <th className="text-gray-500" >
+                  ACTIONS
+                </th>
                       </tr>
                     </thead>
                     <tbody>
                       {" "}
                       <tr>
+                      <th className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </th>
                         <td>Hahaha</td>
                         <td>Hahaha</td>
                         <td>Hahaha</td>
+                        <td>Hahaha</td>
+                        <td>Hahaha</td>
+                        <td>Hahaha</td>
+                        <td>Hahaha</td>
+                        <td>Hahaha</td>
+                       <td> <SelectBox /></td>
                       </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
-                      <tr>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                        <td>Hahaha</td>
-                      </tr>
+                      
                     </tbody>
                   </table>
+                  </div>
                 </div>
                 <div className=" d-flex flex-column w-50 h-100">
                   <div className="  h-25 w-100">
-                    <div className=" w-100 h-100 overflow-y-auto">
-                      <table className="table table-rounded table-row-bordered border gy-7 gs-7">
+                    <div className=" w-100 h-100 overflow-y-auto px-10 border">
+                    
+                    <table className="table table-row-dashed table-row-gray-300 gy-7">
                         <thead>
                           <tr className="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
-                            <th>Shift Code</th>
-                            <th>OT Rule</th>
-                            <th>Working Rule</th>
-                            <th>Allw Rule</th>
-                            <th>E. Shift Code ?</th>
+                            <th className="text-gray-500">SHIFT CODE</th>
+                            <th className="text-gray-500">OT RULE</th>
+                            <th className="text-gray-500">WORKING RULE</th>
+                            <th className="text-gray-500">ALLW RULE</th>
+                            <th className="text-gray-500">E. SHIFT CODE ?</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -193,9 +186,12 @@ export function CalendarWorkingTeamSetting() {
                     </div>
                   </div>
                   <div className="  h-75 w-100 p-5">
-                    <div className="d-flex flex-column gap-5 flex-start">
-                      <div className="row col-12">
-                        <div className="col-5">
+                    <div className="d-flex flex-column gap-5 flex-start w-100">
+                      <div className="row col-12  align-items-center">
+                      <div className="col-2">
+                  <label className="form-label ">Team Code</label>
+                  </div>
+                <div className="col-4">
                           <input
                             type="text"
                             className="form-control form-control-solid"
@@ -203,8 +199,11 @@ export function CalendarWorkingTeamSetting() {
                           />
                         </div>
                       </div>
-                      <div className="row col-12">
-                        <div className="col-5">
+                      <div className="row col-12  align-items-center">
+                      <div className="col-2">
+                  <label className="form-label ">Description</label>
+                  </div>
+                  <div className="col-4">
                           <input
                             type="text"
                             className="form-control form-control-solid"
@@ -212,8 +211,11 @@ export function CalendarWorkingTeamSetting() {
                           />
                         </div>
                       </div>
-                      <div className="row col-12">
-                        <div className="col-5">
+                      <div className="row col-12  align-items-center">
+                      <div className="col-2">
+                  <label className="form-label ">Pattern</label>
+                  </div>
+                  <div className="col-4">
                         <select className="form-select form-select-solid" aria-label="Select example">
   <option>Pattern</option>
   <option value="1">0900-1800</option>
@@ -225,8 +227,11 @@ export function CalendarWorkingTeamSetting() {
 </select>
                         </div>
                       </div>
-                      <div className="row col-12">
-                        <div className="col-5">
+                      <div className="row col-12  align-items-center">
+                      <div className="col-2">
+                  <label className="form-label ">Year of</label>
+                  </div>
+                  <div className="col-4">
                           <input
                             type="number"
                             className="form-control form-control-solid"
@@ -237,8 +242,11 @@ export function CalendarWorkingTeamSetting() {
                           />
                         </div>
                       </div>
-                      <div className="row col-12">
-                        <div className="col-5">
+                      <div className="row col-12  align-items-center">
+                      <div className="col-2">
+                  <label className="form-label ">Start Month</label>
+                  </div>
+                  <div className="col-4">
                           <input
                             type="number"
                             className="form-control form-control-solid"
@@ -249,8 +257,11 @@ export function CalendarWorkingTeamSetting() {
                           />
                         </div>
                       </div>
-                      <div className="row col-12">
-                        <div className="col-5">
+                      <div className="row col-12  align-items-center">
+                      <div className="col-2">
+                  <label className="form-label ">End Month</label>
+                  </div>
+                  <div className="col-4">
                           <input
                             type="number"
                             className="form-control form-control-solid"
@@ -332,18 +343,39 @@ export function CalendarWorkingTeamSetting() {
                   <table className="table table-row-dashed table-row-gray-300 gy-7">
                     <thead>
                       <tr className="fw-bolder fs-6 text-gray-800">
-                        <th style={{ width: "20%" }}>Week No.</th>
-                        <th style={{ width: "15%" }}>Date</th>
-                        <th style={{ width: "15%" }}>Day</th>
-                        <th style={{ width: "15%" }}>Shift Code</th>
-                        <th style={{ width: "20%" }}>Description</th>
-                        <th style={{ width: "10%" }}>OT Rules</th>
-                        <th style={{ width: "10%" }}>Working Rules</th>
-                        <th style={{ width: "10%" }}>Allw Rules</th>
+                      <th className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </th>
+                        <th className="text-gray-500">WEEK NO.</th>
+                        <th className="text-gray-500">DATE</th>
+                        <th className="text-gray-500">DAY</th>
+                        <th className="text-gray-500">SHIFT CODE</th>
+                        <th className="text-gray-500">DESCRIPTION</th>
+                        <th className="text-gray-500">OT RULES</th>
+                        <th className="text-gray-500">WORKING RULES</th>
+                        <th className="text-gray-500">ALLW RULES</th>
+                        <th className="text-gray-500">ACTION</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                      <td className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
                         <td>61</td>
@@ -352,6 +384,8 @@ export function CalendarWorkingTeamSetting() {
                         <td>2011/04/25</td>
                         <td>$320,800</td>
                         <td>$320,800</td>
+                       <td> <SelectBox /></td>
+
                       </tr>
                     </tbody>
                   </table>
@@ -364,22 +398,47 @@ export function CalendarWorkingTeamSetting() {
                   <table className="table table-row-dashed table-row-gray-300 gy-7">
                     <thead>
                       <tr className="fw-bolder fs-6 text-gray-800">
-                        <th>Department</th>
-                        <th>Cardholder No.</th>
-                        <th>Card Holder Name</th>
-                        <th>Status</th>
-                        <th>Team</th>
-                        <th>Resigned Date</th>
-                        <th>Card CSN</th>
-                        <th>Card Type</th>
-                        <th>Job Title</th>
-                        <th>Phone</th>
-                        <th>Mobile Phone</th>
-                        <th>Joined Date</th>
+                      <th className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </th>
+                        <th className="text-gray-500" >DEPARTMENT</th>
+                        <th className="text-gray-500">CARDHOLDER NO.</th>
+                        <th className="text-gray-500">CARD HOLDER NAME</th>
+                        <th className="text-gray-500">STATUS</th>
+                        <th className="text-gray-500">TEAM</th>
+                        <th className="text-gray-500">RESIGNED DATE</th>
+                        <th className="text-gray-500">CARD CSN</th>
+                        <th className="text-gray-500">CARD TYPE</th>
+                        <th className="text-gray-500">JOB TITLE</th>
+                        <th className="text-gray-500">PHONE</th>
+                        <th className="text-gray-500">MOBILE PHONE</th>
+                        <th className="text-gray-500">JOINED DATE</th>
+                        <th className="text-gray-500">ACTION</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                      <td className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
                         <td>61</td>
@@ -388,6 +447,7 @@ export function CalendarWorkingTeamSetting() {
                         <td>2011/04/25</td>
                         <td>$320,800</td>
                         <td>$320,800</td>
+                        <td> <SelectBox /></td>
                       </tr>
                     </tbody>
                   </table>
