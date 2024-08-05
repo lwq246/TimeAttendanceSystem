@@ -73,7 +73,6 @@ const WorkingRuleSetting = () => {
                 </div>
                 <div className="d-flex flex-row border">
                     <div className="d-flex flex-column flex-row-fluid border p-10">
-                        <ButtonGroup />
                         <div className="d-flex mt-5">
                             <div className="overflow-y-auto w-25">
                                 <table className="table table-rounded table-row-bordered border gy-7 gs-7">
@@ -99,7 +98,7 @@ const WorkingRuleSetting = () => {
                                             className="form-control form-control-solid"
                                             placeholder={label}
                                         />
-                                    </div>
+                            </div>
                                 ))}
 
                                 <div className="mb-3">
@@ -238,7 +237,7 @@ const WorkingRuleSetting = () => {
                                   <div className="col-4">
                                     <label className="form-label">Day Type</label>
                                       <select className="form-select form-select-solid" aria-label="Select example">
-                                        <option value="" disabled selected>Please select day type</option>
+                                        <option value="" disabled selected>Select Day Type</option>
                                         <option value="normal">Normal</option>
                                         <option value="holiday">Holiday</option>
                                       </select>
@@ -258,89 +257,57 @@ const WorkingRuleSetting = () => {
                                       </select>
                                   </div>
                                 </div>
-
-                                <hr></hr>
-
-                                <div className="row mb-3">
-                                    <div className="col-6">
-                                        <label className="form-label">Rounding - Work Hour OT</label>
-                                        <select className="form-select form-select-solid" aria-label="Select example">
-                                            <option></option>
-                                            <option value="1">Up</option>
-                                            <option value="2">Down</option>
-                                            <option value="3">R1</option>
-                                            <option value="4">R2</option>
-                                            <option value="5">R3</option>
-                                            <option value="6">R4</option>
-                                            <option value="7">R5</option>
-                                        </select>
+                              <hr></hr>
+                              {/*Rounding*/}   
+                              <div className="d-flex mb-3">
+                                <div className='row d-flex align-items-center me-3'>
+                                    <div className='col-auto d-flex justify-content-center'>
+                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="workhour"/>
                                     </div>
-                                    <div className="col-6">
-                                        <label className="form-label">Customized OT by Formula</label>
-                                        <input type="text" className="form-control form-control-solid" />
-                                    </div>
+                                    <label className="form-label col-auto">Rounding ~&gt; Work Hour</label>
+                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
                                 </div>
-
-                                <hr className="w-100" />
-
-                                <label className="form-label">Weekday/WeekEnd O.T - WeekEnd DateTime Range</label>
-                                <div className="d-flex">
-                                    <div className="me-3" style={{ width: '40%' }}>
-                                        <div className="row mb-3">
-                                            <div className="col-6 text-end">
-                                                <label className="form-label">WeekEnd From</label>
-                                            </div>
-                                            <div className="col-6">
-                                                <select className="form-select form-select-solid" aria-label="Select example">
-                                                    <option></option>
-                                                    <option value="1">Friday</option>
-                                                    <option value="2">Saturday</option>
-                                                    <option value="3">Sunday</option>
-                                                </select>
-                                                <div className="time-input-container d-flex mt-2">
-                                                    <input
-                                                        type="text"
-                                                        className="form-control form-control-solid me-2"
-                                                        placeholder="00:00:00"
-                                                        value={weekEndFromTime}
-                                                        onChange={(e) => handleInputChange(e, setWeekEndFromTime)}
-                                                    />
-                                                    <button className="btn btn-primary me-2" onClick={() => incrementTime(weekEndFromTime, setWeekEndFromTime)}>+</button>
-                                                    <button className="btn btn-secondary" onClick={() => decrementTime(weekEndFromTime, setWeekEndFromTime)}>-</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div className='row d-flex align-items-center'>
+                                    <div className='col-auto d-flex justify-content-center'>
+                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="latein"/>
                                     </div>
-                                    <div style={{ width: '40%' }}>
-                                        <div className="row mb-3">
-                                            <div className="col-6 text-end">
-                                                <label className="form-label">WeekEnd To</label>
-                                            </div>
-                                            <div className="col-6">
-                                                <input
-                                                    type="text"
-                                                    className="form-control form-control-solid"
-                                                    placeholder="00:00:00"
-                                                    value={weekEndToTime}
-                                                    onChange={(e) => handleInputChange(e, setWeekEndToTime)}
-                                                />
-                                                <div className="time-input-container d-flex mt-2">
-                                                    <input
-                                                        type="text"
-                                                        className="form-control form-control-solid me-2"
-                                                        placeholder="00:00:00"
-                                                        value={weekEndToTime}
-                                                        onChange={(e) => handleInputChange(e, setWeekEndToTime)}
-                                                    />
-                                                    <button className="btn btn-primary me-2" onClick={() => incrementTime(weekEndToTime, setWeekEndToTime)}>+</button>
-                                                    <button className="btn btn-secondary" onClick={() => decrementTime(weekEndToTime, setWeekEndToTime)}>-</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <label className="form-label col-auto">Rounding ~&gt; Late In</label>
+                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
                                 </div>
-
-                                {/* Similar sections can be added for Holiday Eve time ranges */}
+                              </div>
+                              <div className="d-flex mb-3">
+                                <div className='row d-flex align-items-center me-3'>
+                                    <div className='col-auto d-flex justify-content-center'>
+                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="earlyout"/>
+                                    </div>
+                                    <label className="form-label col-auto">Rounding ~&gt; Early Out</label>
+                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
+                                </div>
+                                <div className='row d-flex align-items-center'>
+                                    <div className='col-auto d-flex justify-content-center'>
+                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="pjc"/>
+                                    </div>
+                                    <label className="form-label col-auto">Rounding ~&gt; PJC Work Hour</label>
+                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
+                                </div>
+                              </div>
+                                <div className='row d-flex align-items-center me-3'>
+                                      <div className='col-auto d-flex justify-content-center'>
+                                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="addearly"/>
+                                      </div>
+                                      <label className="form-label col-auto">Add S03 Early Out to S01 Earlt Out</label>
+                                      <div className='col-auto d-flex justify-content-center'>
+                                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="addlate"/>
+                                      </div>
+                                      <label className="form-label col-auto">Add S03 Early Out to S01 Late In</label>                                                                  
+                                </div>
+                                <div className='row d-flex align-items-center me-3'>
+                                  <div className='col-auto d-flex justify-content-center'>
+                                    <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                                  </div>
+                                  <label className="form-label col-auto">Uncheck for Late-In/Early-Out</label>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
