@@ -90,7 +90,7 @@ const WorkingRuleSetting = () => {
                                 </table>
                             </div>
                             <div className="d-flex flex-column w-75 p-3">
-                              {/* Fields Section */}
+                              {/* Fields Section (Part 1)*/}
                                 {['Code', 'FlxDefault Shirt Code'].map(label => (
                                     <div className="mb-3" key={label}>
                                         <label className="form-label">{label}</label>
@@ -111,7 +111,7 @@ const WorkingRuleSetting = () => {
                                     </select>
                                 </div>
                                 <hr></hr>
-                              {/*Working Day*/}
+                              {/*Working Day (Part 2)*/}
                                 <div className="row mb-3">
                                   <div className="col-4 d-flex flex-column align-items-start">
                                           <label className="form-label">Working Day(S03+S05+S06) OT Rate</label>
@@ -233,33 +233,33 @@ const WorkingRuleSetting = () => {
 
                                 <hr></hr>
 
+                                {/*Selection (Part 3)*/}
                                 <div className="row mb-3">
-                                  <label className="form-label">Day Type</label>
-                                  <select className="form-select form-select-solid" aria-label="Select example">
-                                      <option value="" disabled selected>Please select day type</option>
-                                      <option value="full">Normal</option>
-                                      <option value="half">Non-Normal</option>
-                                  </select>
+                                  <div className="col-4">
+                                    <label className="form-label">Day Type</label>
+                                      <select className="form-select form-select-solid" aria-label="Select example">
+                                        <option value="" disabled selected>Please select day type</option>
+                                        <option value="normal">Normal</option>
+                                        <option value="holiday">Holiday</option>
+                                      </select>
+                                    </div>
 
                                   <div className="col-4 d-flex flex-column align-items-start">
-                                        <label className="form-label">O.T Auto Deduct Rate</label>
-                                        <select className="form-select form-select-solid" aria-label="Select example">
-                                            <option></option>
-                                            <option value="1">1X</option>
-                                            <option value="2">1.5X</option>
-                                            <option value="3">2X</option>
-                                            <option value="4">2.5X</option>
-                                            <option value="5">3X</option>
-                                            <option value="6">Flat</option>
-                                        </select>
-                                        <div className="form-check form-check-custom mt-2">
-                                            <input className="form-check-input" type="checkbox" id="add-iot-to-idetail" />
-                                            <label className="form-label" htmlFor="add-iot-to-idetail">Add iOT to iDetail Hours</label>
-                                        </div>
+                                    <label className="form-label">Working Day<small> (Day)</small></label>
+                                      <select className="form-select form-select-solid" aria-label="Select example">
+                                        <option></option>
+                                        <option value="" disabled selected>Select Your Working Day</option>
+                                        <option value="d0">0.5</option>
+                                        <option value="d1">1</option>
+                                        <option value="d2">1.5</option>
+                                        <option value="d3">2</option>
+                                        <option value="d4">2.5</option>
+                                        <option value="d5">3</option>
+                                      </select>
                                   </div>
                                 </div>
 
-                                <hr className="w-100" />
+                                <hr></hr>
 
                                 <div className="row mb-3">
                                     <div className="col-6">
