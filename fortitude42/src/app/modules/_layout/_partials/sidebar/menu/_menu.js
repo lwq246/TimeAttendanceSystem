@@ -157,6 +157,12 @@ const _menu = () => {
                                     </span>
                                     <span className="menu-title">Overtime Rule Setting</span>
                                 </Link>
+                                <Link className="menu-link" to="/working-rule-setting">
+                                    <span className="menu-bullet">
+                                        <span className="bullet bullet-dot"></span>
+                                    </span>
+                                    <span className="menu-title">Working Rule Setting</span>
+                                </Link>
                             </div>
                         </Menu>
                         {/* Sidebar Menu end here */}
