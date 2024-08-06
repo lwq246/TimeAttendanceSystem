@@ -112,7 +112,15 @@ const AllowanceRuleSetting = () => {
                               ))}
 
                               <hr></hr>
-                              
+                              <div className="d-flex justify-content-end">
+                                    <button
+                                        type="button"
+                                        className="btn btn-primary me-2"
+                                        onClick={toggleShowDaily}
+                                    >
+                                        {showDaily ? 'Weekly' : 'Daily'}
+                                    </button>
+                              </div>
                               {showDaily ? (
                                 <>                              
                                   {/*Daily Allowance*/}
@@ -209,15 +217,6 @@ const AllowanceRuleSetting = () => {
                                   </div>
                                 </>
                               )}
-                                <div className="d-flex justify-content-end">
-                                    <button
-                                        type="button"
-                                        className="btn btn-primary me-2"
-                                        onClick={toggleShowDaily}
-                                    >
-                                        {showDaily ? 'Weekly' : 'Daily'}
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>
