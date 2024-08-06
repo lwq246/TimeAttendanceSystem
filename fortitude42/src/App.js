@@ -23,6 +23,7 @@ import { WorkingShiftCalendarCodeSetting } from './app/pages/SettingPages/Workin
 import { WorkingShiftPatternSetting } from './app/pages/SettingPages/WorkingShiftPatternSetting';
 import FleXiMealBreakSetting from './app/pages/SettingPages/FleXiMealBreakSetting';
 import WorkingRuleSetting from './app/pages/SettingPages/WorkingRuleSetting';
+import AllowanceRuleSetting from "./app/pages/SettingPages/AllowanceRuleSetting"
 // Modules
 import DashboardPage from './app/modules/dashboard/dashboard';
 import ProfilePage from './app/modules/profile/ProfilePage';
@@ -63,6 +64,7 @@ function App() {
                     <Route path="/flexi-meal-break-setting" element={<PrivateRoute element={FleXiMealBreakSetting} />}></Route>
                     <Route path="/overtime-rule-setting" element={<PrivateRoute element={OvertimeRuleSetting} />}></Route>
                     <Route path="/working-rule-setting" element={<PrivateRoute element={WorkingRuleSetting} />}></Route>
+                    <Route path="/allowance-rule-setting" element={<PrivateRoute element={AllowanceRuleSetting} />}></Route>
                 </Routes>
                 <ToastContainer />
             </Router>
