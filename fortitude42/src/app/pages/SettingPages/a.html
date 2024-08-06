@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Daily Allowance</title>
+  <style>
+    /* CSS to hide the element */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="dailyAllowance">
+    <label>Daily Allowance</label>
+    <select>
+      <option>Meal</option>
+      <option>Transport</option>
+      <option>OT</option>
+      <option>Attendance</option>
+      <option>Daily Allw</option>
+    </select>
+    <input type="number" value="0.00">
+  </div>
+  
+  <button id="variableParamsButton">Variable Params</button>
+  <button id="dailyButton" class="hidden">Daily</button>
+
+  <script>
+    // JavaScript to toggle the content of the daily allowance section
+    document.getElementById("variableParamsButton").addEventListener("click", function() {
+      var dailyAllowance = document.getElementById("dailyAllowance");
+      
+      // New HTML content
+      var newContent = `
+        <div class="col-4 d-flex flex-column align-items-start">
+          <label class="form-label">Working Day(S03+S05+S06) OT Rate</label>
+          <select class="form-select form-select-solid" aria-label="Select example">
+            <option value="" disabled selected>x0</option>
+            <option value="1">x0.5</option>
+            <option value="2">x1</option>
+            <option value="3">x1.5</option>
+            <option value="4">x2</option>
+          </select>
+        </div>
+      `;
+      
+      // Replace the existing content with the new content
+      dailyAllowance.innerHTML = newContent;
+      
+      // Show the "Daily" button
+      document.getElementById("dailyButton").classList.remove("hidden");
+    });
+
+    // JavaScript to go back to the initial "Daily Allowance" section
+    document.getElementById("dailyButton").addEventListener("click", function() {
+      var dailyAllowance = document.getElementById("dailyAllowance");
+      
+      // Initial HTML content
+      var initialContent = `
+        <label>Daily Allowance</label>
+        <select>
+          <option>Meal</option>
+          <option>Transport</option>
+          <option>OT</option>
+          <option>Attendance</option>
+          <option>Daily Allw</option>
+        </select>
+        <input type="number" value="0.00">
+      `;
+      
+      // Replace the existing content with the initial content
+      dailyAllowance.innerHTML = initialContent;
+      
+      // Hide the "Daily" button
+      document.getElementById("dailyButton").classList.add("hidden");
+    });
+  </script>
+</body>
+</html>
