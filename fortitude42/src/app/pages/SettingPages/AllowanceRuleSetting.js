@@ -3,60 +3,14 @@ import { useAuth } from '../../auth/core/AuthProvider';
 import MasterPage from '../../modules/_layout/_default';
 
 const AllowanceRuleSetting = () => {
-    const { logout } = useAuth();
-    const [time, setTime] = useState('00:00:00');
     const [showDaily, setShowDaily] = useState(false);
+    const [headingText, setHeadingText] = useState('Daily Allowance');
 
     const pad = (num) => num.toString().padStart(2, '0');
 
-    const incrementTime = (time, setTime) => {
-        let [hours, minutes, seconds] = time.split('.').map(Number);
-
-        seconds += 1;
-        if (seconds >= 60) {
-            seconds = 0;
-            minutes += 1;
-        }
-        if (minutes >= 60) {
-            minutes = 0;
-            hours += 1;
-        }
-        if (hours >= 24) {
-            hours = 0;
-        }
-
-        setTime(`${pad(hours)}.${pad(minutes)}.${pad(seconds)}`);
-    };
-
-    const decrementTime = (time, setTime) => {
-        let [hours, minutes, seconds] = time.split('.').map(Number);
-
-        seconds -= 1;
-        if (seconds < 0) {
-            seconds = 59;
-            minutes -= 1;
-        }
-        if (minutes < 0) {
-            minutes = 59;
-            hours -= 1;
-        }
-        if (hours < 0) {
-            hours = 23;
-        }
-
-        setTime(`${pad(hours)}.${pad(minutes)}.${pad(seconds)}`);
-    };
-
-    const handleInputChange = (e, setTime) => {
-        const value = e.target.value;
-        const timePattern = /^([0-1]?[0-9]|2[0-3]).([0-5]?[0-9]).([0-5]?[0-9])$/;
-        if (timePattern.test(value)) {
-            setTime(value);
-        }
-    };
-
     const toggleShowDaily = () => {
         setShowDaily((prevState) => !prevState);
+        setHeadingText((prevState) => (prevState === 'Daily Allowance' ? 'Weekly Allowance' : 'Daily Allowance'));
     };
 
     return (
@@ -64,7 +18,7 @@ const AllowanceRuleSetting = () => {
             <div className="d-flex flex-column flex-column-fluid p-4">
                 <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
                     <div id="kt_app_toolbar_container" className="app-container container-xxl d-flex flex-stack">
-                        <h2>Allowance Rule Setting</h2>
+                        <h2 style={{ textDecoration: 'underline' }}>Allowance Rule Setting</h2>
                     </div>
                 </div>
                 <div className="d-flex flex-row border">
@@ -79,7 +33,7 @@ const AllowanceRuleSetting = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Allowence</td>
+                                        <td>Allowance</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -112,14 +66,19 @@ const AllowanceRuleSetting = () => {
                               ))}
 
                               <hr></hr>
-                              <div className="d-flex justify-content-end">
-                                    <button
-                                        type="button"
-                                        className="btn btn-primary me-2"
-                                        onClick={toggleShowDaily}
-                                    >
-                                        {showDaily ? 'Weekly' : 'Daily'}
-                                    </button>
+                              <div className="d-flex justify-content-between align-items-center">
+                                  <div id="kt_app_toolbar">
+                                      <div id="toolbar_container">
+                                          <h2 style={{ textDecoration: 'underline' }}>{headingText}</h2>
+                                      </div>
+                                  </div>
+                                  <button
+                                      type="button"
+                                      className="btn btn-primary me-2"
+                                      onClick={toggleShowDaily}
+                                  >
+                                      {showDaily ? 'Variable Params' : 'Daily Allowance'}
+                                  </button>
                               </div>
                               {showDaily ? (
                                 <>                              
@@ -137,7 +96,7 @@ const AllowanceRuleSetting = () => {
                                       </div>
                                       <div className="col d-flex align-items-center">
                                           <label className="form-label me-5">Monthly Limit</label>
-                                          <input type="number" className="form-control w-50" />
+                                          <input type="number" placeholder="00.00" className="form-control w-50" />
                                       </div>
                                   </div>
                                   <div className="row mb-3 align-items-center">
@@ -153,7 +112,7 @@ const AllowanceRuleSetting = () => {
                                       </div>
                                       <div className="col d-flex align-items-center">
                                           <label className="form-label me-5">Monthly Limit</label>
-                                          <input type="number" className="form-control w-50" />
+                                          <input type="number" placeholder="00.00" className="form-control w-50" />
                                       </div>
                                   </div>
                                   <div className="row mb-3 align-items-center">
@@ -169,7 +128,7 @@ const AllowanceRuleSetting = () => {
                                       </div>
                                       <div className="col d-flex align-items-center">
                                           <label className="form-label me-5">Monthly Limit</label>
-                                          <input type="number" className="form-control w-50" />
+                                          <input type="number" placeholder="00.00" className="form-control w-50" />
                                       </div>
                                   </div>
                                   <div className="row mb-3 align-items-center">
@@ -185,7 +144,7 @@ const AllowanceRuleSetting = () => {
                                       </div>
                                       <div className="col d-flex align-items-center">
                                           <label className="form-label me-5">Monthly Limit</label>
-                                          <input type="number" className="form-control w-50" />
+                                          <input type="number" placeholder="00.00" className="form-control w-50" />
                                       </div>
                                   </div>
                                   <div className="row mb-3 align-items-center">
@@ -201,20 +160,14 @@ const AllowanceRuleSetting = () => {
                                       </div>
                                       <div className="col d-flex align-items-center">
                                           <label className="form-label me-5">Monthly Limit</label>
-                                          <input type="number" className="form-control w-50" />
+                                          <input type="number" placeholder="00.00" className="form-control w-50" />
                                       </div>
                                   </div>
                                 </>
                               ) : (
                                 <>
-                                  <div className="mb-3">
-                                    <label className="form-label">Allowance Type</label>
-                                    <select className="form-select form-select-solid" aria-label="Select example">
-                                        <option value="" disabled selected>Please select your choice</option>
-                                        <option value="type1">Full Day</option>
-                                        <option value="type2">Half Day</option>
-                                    </select>
-                                  </div>
+                                  {/*Variable Params*/}
+                                  {/* ...Your Variable Params content... */}
                                 </>
                               )}
                             </div>
