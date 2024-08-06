@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../auth/core/AuthProvider';
 import MasterPage from '../../modules/_layout/_default';
+import MonthlyAllowance from './MonthlyAllowance';
 
 const AllowanceRuleSetting = () => {
     const [showDaily, setShowDaily] = useState(false);
@@ -167,10 +168,11 @@ const AllowanceRuleSetting = () => {
                               ) : (
                                 <>
                                   {/*Variable Params*/}
-                                  {/* ...Your Variable Params content... */}
+                                  
                                 </>
                               )}
-                            </div>
+                              <MonthlyAllowance></MonthlyAllowance>
+                            </div>                        
                         </div>
                     </div>
                 </div>
