@@ -31,7 +31,7 @@ export default function DailyAllowance() {
     return (
         <div>
             <ul className="nav nav-tabs nav-line-tabs mb-5 fs-6">
-                                  <li className="nav-item">
+                                  <li>
                                       <a 
                                           className="nav-link active" 
                                           data-bs-toggle="tab" 
@@ -41,7 +41,7 @@ export default function DailyAllowance() {
                                           Daily Allowance
                                       </a>
                                   </li>
-                                  <li className="nav-item">
+                                  <li>
                                       <a 
                                           className="nav-link" 
                                           data-bs-toggle="tab" 

@@ -41,12 +41,12 @@ export default function MonthlyAllowance() {
                 </div>
             </div>
             <ul className="nav nav-tabs nav-line-tabs mb-5 fs-6">
-                <li className="nav-item">
+                <li>
                     <a className="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">
                         I-VI
                     </a>
                 </li>
-                <li className="nav-item">
+                <li>
                     <a className="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_2">
                         VII-X
                     </a>
