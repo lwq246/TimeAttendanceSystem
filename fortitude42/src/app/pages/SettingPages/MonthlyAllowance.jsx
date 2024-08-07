@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 export default function MonthlyAllowance() {
-    const [showDaily, setShowDaily] = useState(false);
-    const [headingText, setHeadingText] = useState('I-VI');
     const [formData, setFormData] = useState({
         perfectAtten: '0',
         monthlyLimit1: '',
@@ -26,11 +24,6 @@ export default function MonthlyAllowance() {
         monthlyLimit10: ''
     });
 
-    const toggleShowDaily = () => {
-        setShowDaily(prevState => !prevState);
-        setHeadingText(prevState => prevState === 'I-VI' ? 'VII-X' : 'I-VI');
-    };
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -42,29 +35,31 @@ export default function MonthlyAllowance() {
     return (
         <div>
             <hr />
-            <div className="d-flex justify-content-between align-items-center">
-                <div id="kt_app_toolbar">
-                    <div id="toolbar_container">
-                        <h2 style={{ textDecoration: 'underline' }}>Monthly Allowance</h2>
-                    </div>
+            <div id="kt_app_toolbar">
+                <div id="toolbar_container">
+                    <h2 style={{ textDecoration: 'underline' }}>Monthly Allowance</h2>
                 </div>
-                <button
-                    type="button"
-                    className="btn btn-primary me-2"
-                    onClick={toggleShowDaily}
-                >
-                    {showDaily ? 'VII-X' : 'I-VI'}
-                </button>
             </div>
-            {showDaily ? (
-                <>
+            <ul className="nav nav-tabs nav-line-tabs mb-5 fs-6">
+                <li className="nav-item">
+                    <a className="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">
+                        I-VI
+                    </a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_2">
+                        VII-X
+                    </a>
+                </li>
+            </ul>
+            <div className="tab-content">
+                <div className="tab-pane fade show active" id="kt_tab_pane_1">
                     {/* I-VI Part */}
                     <div className="row mb-3 align-items-center">
                         <div className="col-auto d-flex align-items-center">
                             <label className="form-label me-10">Perfect Atten</label>
                             <select
                                 className="form-select"
-                                aria-label="fullatten"
                                 name="perfectAtten"
                                 value={formData.perfectAtten}
                                 onChange={handleChange}
@@ -233,9 +228,8 @@ export default function MonthlyAllowance() {
                             />
                         </div>
                     </div>
-                </>
-            ) : (
-                <>
+                </div>
+                <div className="tab-pane fade" id="kt_tab_pane_2">
                     {/* VII-X Part */}
                     <div className="row mb-3 align-items-center">
                         <div className="col-auto d-flex align-items-center">
@@ -353,8 +347,8 @@ export default function MonthlyAllowance() {
                             />
                         </div>
                     </div>
-                </>
-            )}
+                </div>
+            </div>
         </div>
     );
 }
