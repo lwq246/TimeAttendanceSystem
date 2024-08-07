@@ -70,7 +70,7 @@ const AllowanceRuleSetting = () => {
                               <div className="d-flex justify-content-between align-items-center">
                                   <div id="kt_app_toolbar">
                                       <div id="toolbar_container">
-                                          <h2 style={{ textDecoration: 'underline' }}>{headingText}</h2>
+                                          <h2 style={{ textDecoration: 'underline' }}>Daily Allowance</h2>
                                       </div>
                                   </div>
                                   <button
