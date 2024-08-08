@@ -258,38 +258,75 @@ const WorkingRuleSetting = () => {
                                   </div>
                                 </div>
                               <hr></hr>
-                              {/*Rounding*/}   
+                              {/*Rounding*/}{/***********************************************************************************************************/}
                               <div className="d-flex mb-3">
-                                <div className='row d-flex align-items-center me-3'>
-                                    <div className='col-auto d-flex justify-content-center'>
-                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="workhour"/>
-                                    </div>
-                                    <label className="form-label col-auto">Rounding ~&gt; Work Hour</label>
-                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
-                                </div>
-                                <div className='row d-flex align-items-center'>
-                                    <div className='col-auto d-flex justify-content-center'>
-                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="latein"/>
-                                    </div>
-                                    <label className="form-label col-auto">Rounding ~&gt; Late In</label>
-                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
-                                </div>
+                                  <div className='col-6 d-flex align-items-center'>
+                                      <div className='d-flex align-items-center me-3' style={{ width: '100%' }}>
+                                          <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="workhour"/>
+                                          <label className="form-label ms-2 me-2">Rounding ~&gt; Work Hour</label>
+                                          <select className="form-select " style={{flex: '1'}} aria-label="Select example">
+                                              <option></option>
+                                              <option value="">0</option>
+                                              <option value="d0">0.5</option>
+                                              <option value="d1">1</option>
+                                              <option value="d2">1.5</option>
+                                              <option value="d3">2</option>
+                                              <option value="d4">2.5</option>
+                                              <option value="d5">3</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div className='col-6 d-flex align-items-center'>
+                                      <div className='d-flex align-items-center' style={{ width: '100%' }}>
+                                          <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="latein"/>
+                                          <label className="form-label ms-2 me-2">Rounding ~&gt; Late IN</label>
+                                          <select className="form-select " style={{flex: '1'}} aria-label="Select example">
+                                              <option></option>
+                                              <option value="">0</option>
+                                              <option value="d0">0.5</option>
+                                              <option value="d1">1</option>
+                                              <option value="d2">1.5</option>
+                                              <option value="d3">2</option>
+                                              <option value="d4">2.5</option>
+                                              <option value="d5">3</option>
+                                          </select>
+                                      </div>
+                                  </div>
                               </div>
+
                               <div className="d-flex mb-3">
-                                <div className='row d-flex align-items-center me-3'>
-                                    <div className='col-auto d-flex justify-content-center'>
-                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="earlyout"/>
-                                    </div>
-                                    <label className="form-label col-auto">Rounding ~&gt; Early Out</label>
-                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
-                                </div>
-                                <div className='row d-flex align-items-center'>
-                                    <div className='col-auto d-flex justify-content-center'>
-                                      <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="pjc"/>
-                                    </div>
-                                    <label className="form-label col-auto">Rounding ~&gt; PJC Work Hour</label>
-                                    <input type="number" className="form-control form-control-solid" style={{ width: "45%" }}/>                                
-                                </div>
+                                  <div className='col-6 d-flex align-items-center'>
+                                      <div className='d-flex align-items-center me-3' style={{ width: '100%' }}>
+                                          <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="early"/>
+                                          <label className="form-label ms-2 me-2">Rounding ~&gt; Early OUT</label>
+                                          <select className="form-select " style={{flex: '1'}} aria-label="Select example">
+                                              <option></option>
+                                              <option value="">0</option>
+                                              <option value="d0">0.5</option>
+                                              <option value="d1">1</option>
+                                              <option value="d2">1.5</option>
+                                              <option value="d3">2</option>
+                                              <option value="d4">2.5</option>
+                                              <option value="d5">3</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div className='col-6 d-flex align-items-center'>
+                                      <div className='d-flex align-items-center' style={{ width: '100%' }}>
+                                          <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="pjc"/>
+                                          <label className="form-label ms-2 me-2">Rounding ~&gt; PJC Work Hour</label>
+                                          <select className="form-select " style={{flex: '1'}} aria-label="Select example">
+                                              <option></option>
+                                              <option value="">0</option>
+                                              <option value="d0">0.5</option>
+                                              <option value="d1">1</option>
+                                              <option value="d2">1.5</option>
+                                              <option value="d3">2</option>
+                                              <option value="d4">2.5</option>
+                                              <option value="d5">3</option>
+                                          </select>
+                                      </div>
+                                  </div>
                               </div>
                                 <div className='row d-flex align-items-center me-3'>
                                       <div className='col-auto d-flex justify-content-center'>
