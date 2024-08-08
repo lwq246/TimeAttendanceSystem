@@ -4,12 +4,16 @@ import { useAuth } from '../../auth/core/AuthProvider';
 // Master Layout
 import MasterPage from '../../modules/_layout/_default';
 import ButtonGroup from '../components/ButtonGroup';
-import SelectBox from '../components/SelectBox';
+import Table from '../components/Table';
+
 
 const DepartmentSetting = () => {
     const { logout } = useAuth();
     const [departments, setDepartments] = useState([]);
     const [filterText, setFilterText] = useState('');
+    const [checkedDepartments, setCheckedDepartments] = useState([]);
+    const [isAllChecked, setIsAllChecked] = useState(false);
+    const [anyChecked, setAnyChecked] = useState(false);
 
     useEffect(() => {
         const fetchDepartments = async () => {
@@ -18,8 +22,9 @@ const DepartmentSetting = () => {
                 console.log('API Response:', response.data); // Inspect the data structure
                 if (Array.isArray(response.data.departments)) {
                     // Flatten the list of tuples to a list of strings
-                    const departmentNames = response.data.departments.map(dept => dept[0]);
+                    const departmentNames = response.data.departments.map(dept => ({ name: dept[0] }));
                     setDepartments(departmentNames);
+                    setCheckedDepartments(new Array(departmentNames.length).fill(false));
                 } else {
                     console.error('Unexpected response format:', response.data);
                 }
@@ -35,9 +40,34 @@ const DepartmentSetting = () => {
         setFilterText(e.target.value);
     };
 
+    const handleHeaderCheckboxChange = (checked) => {
+        setIsAllChecked(checked);
+        const newCheckedDepartments = new Array(departments.length).fill(checked);
+        setCheckedDepartments(newCheckedDepartments);
+        setAnyChecked(checked);
+    };
+
+    const handleCheckboxChange = (index) => {
+        const updatedCheckedDepartments = [...checkedDepartments];
+        updatedCheckedDepartments[index] = !updatedCheckedDepartments[index];
+        setCheckedDepartments(updatedCheckedDepartments);
+
+        const anyChecked = updatedCheckedDepartments.some(checked => checked);
+        setAnyChecked(anyChecked);
+
+        // Update the state of the header checkbox
+        const allChecked = updatedCheckedDepartments.every(checked => checked);
+        setIsAllChecked(allChecked);
+    };
+
     const filteredDepartments = departments.filter(department =>
-        department.toLowerCase().includes(filterText.toLowerCase())
+        department.name.toLowerCase().includes(filterText.toLowerCase())
     );
+
+    const headers = [
+        { key: 'name', label: 'DEPARTMENT', width: '90%' },
+      
+    ];
 
     return (
         <MasterPage>
@@ -78,56 +108,21 @@ const DepartmentSetting = () => {
                                     </div>
                                 </div>
                                 <div className="col-8 d-flex flex-center flex-start">
-                                    <ButtonGroup />
+                                    <ButtonGroup anyChecked={anyChecked} />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex flex-column-fluid flex-start px-10 border-top-0">
-                        <table className="table table-row-dashed table-row-gray-300 gy-7">
-                            <thead>
-                                <tr className="fw-bolder fs-6 text-gray-800">
-                                    <th>
-                                        <div className="form-check form-check-custom form-check-solid">
-                                            <input
-                                                className="form-check-input"
-                                                type="checkbox"
-                                                value=""
-                                                id="flexCheckDefault"
-                                            />
-                                        </div>
-                                    </th>
-                                    <th className="text-gray-500" style={{ width: '90%' }}>
-                                        DEPARTMENT
-                                    </th>
-                                    <th className="text-gray-500" style={{ width: '10%' }}>
-                                        ACTIONS
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {filteredDepartments.map((department, index) => (
-                                    <tr key={index}>
-                                        <td>
-                                            <div className="form-check form-check-custom form-check-solid">
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    value=""
-                                                    id="flexCheckDefault"
-                                                />
-                                            </div>
-                                        </td>
-                                        <td>{department}</td>
-                                        <td>
-                                            <SelectBox />
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                    <Table
+                        headers={headers}
+                        data={filteredDepartments}
+                        isAllChecked={isAllChecked}
+                        checkedDepartments={checkedDepartments}
+                        onHeaderCheckboxChange={handleHeaderCheckboxChange}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
+
                     <ul className="pagination" style={{ marginLeft: 'auto' }}>
                         <li className="page-item previous disabled">
                             <a href="#" className="page-link">

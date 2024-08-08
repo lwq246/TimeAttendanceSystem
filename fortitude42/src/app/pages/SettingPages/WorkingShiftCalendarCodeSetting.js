@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
 import MasterPage from '../../modules/_layout/_default';
-
+import SelectBox from "../components/SelectBox";
 
 export function WorkingShiftCalendarCodeSetting() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -127,125 +127,52 @@ export function WorkingShiftCalendarCodeSetting() {
             </div>
           </div>
           <div style={{ width: "50%", height: "100%", overflowY: "auto" }}>
-            <table
-              className="table table-striped table-bordered h-100"
-              style={{ width: "100%" }}
-            >
-              <thead className="thead-dark">
-                <tr>
-                  <th scope="col">Year</th>
-                  <th scope="col">Month</th>
-                  <th scope="col">Code</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>John</td>
-                  <td>Doe</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="w-100 h-100 overflow-y-auto px-10 border">
+                <table className="table table-row-dashed table-row-gray-300 gy-7">
+                    <thead>
+                      <tr className="fw-bold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                      <th className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </th>
+                        <th className="text-gray-500">YEAR</th>
+                        <th className="text-gray-500">MONTH</th>
+                        <th className="text-gray-500">CODE</th>
+                       
+                        <th className="text-gray-500" >
+                  ACTIONS
+                </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {" "}
+                      <tr>
+                      <th className="text-gray-500">
+                  <div className="form-check form-check-custom form-check-solid">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </th>
+                        
+                        <td>Hahaha</td>
+                        <td>Hahaha</td>
+                        <td>Hahaha</td>
+                       <td> <SelectBox /></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  </div>
           </div>
         </div>
         <div
