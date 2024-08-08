@@ -2,16 +2,20 @@ import React, { useState } from 'react';
 
 export default function DailyAllowance() {
     const [formData, setFormData] = useState({
-        meal: '0',
-        monthlyLimit1: '',
-        transport: '0',
-        monthlyLimit2: '',
-        overtime: '0',
-        monthlyLimit3: '',
-        attendance: '0',
-        monthlyLimit4: '',
-        dailyallowance: '0',
-        monthlyLimit5: '',
+        variable1:'0',
+        variable2:'0',
+        variable3:'0',
+        variable4:'0',
+        variable5:'0',
+        variable6:'0',
+        variable7:'0',
+        variable8:'0',
+        variable9:'0',
+        variable10:'0',
+        variable11:'0',
+        variable12:'0',
+        filter1:'0',
+        filter2:'0',
     });
 
     const handleChange = (e) => {
@@ -204,6 +208,248 @@ export default function DailyAllowance() {
                             />
                         </div>
                     </div>
+                </div>
+                <div className="tab-pane fade show active" id="kt_tab_pane_4">
+                    {/*Variable Paramsa Part */}
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 1</label>
+                            <select
+                                className="form-select"
+                                name="variable1"
+                                value={formData.variable1}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 2</label>
+                            <select
+                                className="form-select"
+                                name="variable2"
+                                value={formData.variable2}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 3</label>
+                            <select
+                                className="form-select"
+                                name="variable3"
+                                value={formData.variable3}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 4</label>
+                            <select
+                                className="form-select"
+                                name="variable4"
+                                value={formData.variable4}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 5</label>
+                            <select
+                                className="form-select"
+                                name="variable5"
+                                value={formData.variable5}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 6</label>
+                            <select
+                                className="form-select"
+                                name="variable6"
+                                value={formData.variable6}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 7</label>
+                            <select
+                                className="form-select"
+                                name="variable7"
+                                value={formData.variable7}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 8</label>
+                            <select
+                                className="form-select"
+                                name="variable8"
+                                value={formData.variable8}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                    </div>
+
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 9</label>
+                            <select
+                                className="form-select"
+                                name="variable9"
+                                value={formData.variable9}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 10</label>
+                            <select
+                                className="form-select"
+                                name="variable10"
+                                value={formData.variable10}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                    </div>
+
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 11</label>
+                            <select
+                                className="form-select"
+                                name="variable11"
+                                value={formData.variable11}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Variable 12</label>
+                            <select
+                                className="form-select"
+                                name="variable12"
+                                value={formData.variable12}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <input className="form-check-input h-20px w-20px" type="checkbox" value="" id="uncheck"/>
+                    </div>
+
+                    <hr/>
+                    
+                    <div className="row mb-3 align-items-center">
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Custom Filter 1</label>
+                            <select
+                                className="form-select"
+                                name="filter1"
+                                value={formData.filter1}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                        <div className="col-5 d-flex align-items-center">
+                            <label className="form-label me-2">Custom Filter 2</label>
+                            <select
+                                className="form-select"
+                                name="filter2"
+                                value={formData.filter2}
+                                onChange={handleChange}
+                            >
+                                <option value="0">x0</option>
+                                <option value="1">x0.5</option>
+                                <option value="2">x1</option>
+                                <option value="3">x1.5</option>
+                                <option value="4">x2</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -40,9 +40,9 @@ export default function MonthlyAllowance() {
                     <h2 style={{ textDecoration: 'underline' }}>Monthly Allowance</h2>
                 </div>
             </div>
-            <ul className="nav nav-tabs nav-line-tabs mb-5 fs-6">
+            <ul className="nav nav-tabs  mb-5 fs-6">
                 <li>
-                    <a className="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">
+                    <a className="nav-link" data-bs-toggle="tab" href="#kt_tab_pane_1">
                         I-VI
                     </a>
                 </li>

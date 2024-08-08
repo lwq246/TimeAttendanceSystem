@@ -3,6 +3,7 @@ import { useAuth } from '../../auth/core/AuthProvider';
 import MasterPage from '../../modules/_layout/_default';
 import MonthlyAllowance from './MonthlyAllowance';
 import DailyAllowance from './DailyAllowance';
+import { Link } from "react-router-dom";
 
 const AllowanceRuleSetting = () => {
     const [showDaily, setShowDaily] = useState(true);
@@ -45,6 +46,15 @@ const AllowanceRuleSetting = () => {
                 </div>
                 <div className="d-flex flex-row border">
                     <div className="d-flex flex-column flex-row-fluid border p-10">
+                      <div className="d-flex gap-5" style={{ marginLeft: "auto" }}>
+                        <Link to="#" className="btn btn-primary">
+                                            <i className="bi bi-person-add"></i>
+                                            New
+                                        </Link>
+                                        <Link to="#" className="btn btn-primary">
+                                            Delete
+                                        </Link>
+                      </div>                  
                         <div className="d-flex mt-5">
                           <div className="overflow-y-auto w-150px">
                             <table className="table table-rounded table-row-bordered border gy-7 gs-7">
@@ -91,7 +101,15 @@ const AllowanceRuleSetting = () => {
                               <MonthlyAllowance></MonthlyAllowance>
                             </div>                        
                         </div>
-                    </div>
+                        <div className="d-flex gap-5" style={{ marginLeft: "auto" }}>
+                        <Link to="#" className="btn btn-primary">
+                              Setup Allowance Type
+                        </Link>
+                        <Link to="#" className="btn btn-primary">
+                              Setup Formula
+                        </Link>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </MasterPage>
