@@ -22,41 +22,52 @@ const MainSettingPage = () => {
               </div>
               <div className="w-full flex-column">
                 <div className='row w-full  justify-content-center column-gap-10 mb-8'>
-                  <div className='d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> 
-                    <Link to={`/branch-setting`} className="menu-title"> {/* Wrap the title in a Link */}
+                <Link to={`/branch-setting`} className='menu-title d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> {/* Wrap the title in a Link */}
+                 
+                   
                       <h2>Branch Setting</h2>
-                    </Link>
-                  </div>
-                  <div className='d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> 
-                    <Link to={`/department-setting`} className="menu-title"> {/* Wrap the title in a Link */}
+                    
+                
+                  </Link>
+                  <Link to={`/department-setting`} className='menu-title d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> {/* Wrap the title in a Link */}
+                  
+                    
                       <h2>Department Setting</h2>
-                    </Link>
-                  </div>
-                  <div className='d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> 
-                    <Link to={`/public-holiday-setting`} className="menu-title"> {/* Wrap the title in a Link */}
+                   
+                
+                  </Link>
+                  <Link to={`/public-holiday-setting`} className='menu-title d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> {/* Wrap the title in a Link */}
+                 
                       <h2>Public Holiday Setting</h2>
-                    </Link>
-                  </div>
+                  
+             
+                  </Link>
             
                 </div>
                 <div className='row w-full  justify-content-center column-gap-10 mb-8'>
-                  <div className='d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> 
-                    <Link to={`/branch-setting`} className="menu-title"> {/* Wrap the title in a Link */}
+                <Link to={`/branch-setting`} className='menu-title d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> {/* Wrap the title in a Link */}
+                 
+                   
                       <h2>Branch Setting</h2>
-                    </Link>
-                  </div>
-                  <div className='d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> 
-                    <Link to={`/department-setting`} className="menu-title"> {/* Wrap the title in a Link */}
+                    
+                
+                  </Link>
+                  <Link to={`/department-setting`} className='menu-title d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> {/* Wrap the title in a Link */}
+                  
+                    
                       <h2>Department Setting</h2>
-                    </Link>
-                  </div>
-                  <div className='d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> 
-                    <Link to={`/public-holiday-setting`} className="menu-title"> {/* Wrap the title in a Link */}
+                   
+                
+                  </Link>
+                  <Link to={`/public-holiday-setting`} className='menu-title d-flex flex-column align-items-center col-3 border rounded border-secondary justify-content-center' style={{ height: "25vh" }}> {/* Wrap the title in a Link */}
+                 
                       <h2>Public Holiday Setting</h2>
-                    </Link>
-                  </div>
+                  
+             
+                  </Link>
             
                 </div>
+                
                 
 
                 
