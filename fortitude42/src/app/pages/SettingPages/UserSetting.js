@@ -81,7 +81,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">User ID</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="User ID"
                       className="form-control"
                     />
                   </div>
@@ -89,7 +89,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">Name</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="Name"
                       className="form-control"
                     />
                   </div>
@@ -99,7 +99,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">Expiry</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="Expiry"
                       className="form-control"
                     />
                   </div>
@@ -107,7 +107,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">Last Login</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="Last Login"
                       className="form-control"
                     />
                   </div>
@@ -122,7 +122,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">Locked</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="Locked"
                       className="form-control"
                     />
                   </div>
@@ -132,7 +132,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">SSO</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="SSO"
                       className="form-control"
                     />
                   </div>
@@ -140,7 +140,7 @@ const UserSetting = () => {
                     <label className="form-label me-5">Access Group</label>
                     <input
                       type="text"
-                      placeholder="HI"
+                      placeholder="Access Group"
                       className="form-control w-100"
                     />
                   </div>
