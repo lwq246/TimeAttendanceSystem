@@ -82,9 +82,8 @@ const DepartmentSetting = () => {
                 </div>
 
                 <div className="d-flex flex-column border w-100">
-                    <div className="d-flex flex-column flex-row-fluid border p-10 w-100">
-                        <div className="d-flex flex-row-fluid w-100">
-                            <div className="d-flex flex-row-fluid w-100">
+                    <div className="d-flex flex-row flex-row-fluid border p-10 w-100">
+                      
                                 <div className="col-4 d-flex flex-center flex-start">
                                     <div className="d-flex flex-column gap-4 flex-start w-100">
                                         <div className="d-flex flex-row-fluid align-items-center w-100">
@@ -111,8 +110,7 @@ const DepartmentSetting = () => {
                                     <ButtonGroup anyChecked={anyChecked} />
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                       
 
                     <Table
                         headers={headers}
@@ -155,7 +153,7 @@ const DepartmentSetting = () => {
                             </a>
                         </li>
                         <li className="page-item">
-                            <a href="#" className="page-link">
+                            <a href="/overtime-rule-setting" className="page-link">
                                 6
                             </a>
                         </li>

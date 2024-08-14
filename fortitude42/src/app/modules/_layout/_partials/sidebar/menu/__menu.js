@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const _menu_item = ({ title, icon, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,7 @@ const _menu_item = ({ title, icon, children }) => {
   };
 
   return (
-    <div data-kt-menu-trigger="click" className={`menu-item menu-accordion ${isOpen ? 'show' : ''}`} onClick={handleToggle} >
+    <div data-kt-menu-trigger="click" className={`menu-item menu-accordion ${isOpen ? 'show' : ''}`}  >
         {/* begin:Menu link */}
         <span className="menu-link">
             <span className="menu-icon">
@@ -18,8 +19,10 @@ const _menu_item = ({ title, icon, children }) => {
                     <span className="path3"></span>
                 </i>
             </span>
-            <span className="menu-title">{title}</span>
-            <span className="menu-arrow"></span>
+            <Link to={`/${title}`} className="menu-title"> {/* Wrap the title in a Link */}
+          {title}
+        </Link>
+            <span className="menu-arrow" onClick={handleToggle}></span>
         </span>
         {/* end:Menu link */}
         {/* begin:Menu sub */}

@@ -14,16 +14,17 @@ import ForgotPasswordPage from './app/auth/forgot-password';
 import ResetPasswordPage from './app/auth/reset-password';
 import SignInPage from './app/auth/sign-in';
 import SignUpPage from './app/auth/sign-up';
+import AllowanceRuleSetting from "./app/pages/SettingPages/AllowanceRuleSetting";
 import BranchSetting from './app/pages/SettingPages/BranchSetting';
 import { CalendarWorkingTeamSetting } from './app/pages/SettingPages/CalendarWorkingTeamSetting';
 import DepartmentSetting from './app/pages/SettingPages/DepartmentSetting';
+import FleXiMealBreakSetting from './app/pages/SettingPages/FleXiMealBreakSetting';
+import MainSettingPage from './app/pages/SettingPages/MainSettingPage';
 import PublicHolidaySetting from './app/pages/SettingPages/PublicHolidaySetting';
 import { ReasonSetting } from './app/pages/SettingPages/ReasonSetting';
+import WorkingRuleSetting from './app/pages/SettingPages/WorkingRuleSetting';
 import { WorkingShiftCalendarCodeSetting } from './app/pages/SettingPages/WorkingShiftCalendarCodeSetting';
 import { WorkingShiftPatternSetting } from './app/pages/SettingPages/WorkingShiftPatternSetting';
-import FleXiMealBreakSetting from './app/pages/SettingPages/FleXiMealBreakSetting';
-import WorkingRuleSetting from './app/pages/SettingPages/WorkingRuleSetting';
-import AllowanceRuleSetting from "./app/pages/SettingPages/AllowanceRuleSetting"
 // Modules
 import DashboardPage from './app/modules/dashboard/dashboard';
 import ProfilePage from './app/modules/profile/ProfilePage';
@@ -52,6 +53,8 @@ function App() {
                     <Route path="/dashboard" element={<PrivateRoute element={DashboardPage} />} />
                     <Route path="/profile" element={<PrivateRoute element={ProfilePage} />} />
                     <Route path="/test" element={<PrivateRoute element={TestPage} />} />
+
+                    <Route path="/Setting" element={<PrivateRoute element={MainSettingPage} />}></Route>
                     <Route path="/branch-setting" element={<PrivateRoute element={BranchSetting} />}></Route>
                     <Route path="/department-setting" element={<PrivateRoute element={DepartmentSetting} />}></Route>
                     <Route path="/public-holiday-setting" element={<PrivateRoute element={PublicHolidaySetting} />}></Route>
