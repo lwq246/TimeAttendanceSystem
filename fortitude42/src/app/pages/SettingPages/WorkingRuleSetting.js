@@ -68,7 +68,7 @@ const WorkingRuleSetting = () => {
             <div className="d-flex flex-column flex-column-fluid p-4">
                 <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
                     <div id="kt_app_toolbar_container" className="app-container container-xxl d-flex flex-stack">
-                        <h2>Overtime Rule Setting</h2>
+                        <h2>Working Rule Setting</h2>
                     </div>
                 </div>
                 <div className="d-flex flex-row border">

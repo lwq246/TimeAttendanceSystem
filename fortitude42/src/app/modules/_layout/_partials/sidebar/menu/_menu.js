@@ -169,6 +169,12 @@ const _menu = () => {
                                     </span>
                                     <span className="menu-title">Allowance Rule Setting</span>
                                 </Link>
+                                <Link className="menu-link" to="/user-setting">
+                                    <span className="menu-bullet">
+                                        <span className="bullet bullet-dot"></span>
+                                    </span>
+                                    <span className="menu-title">User Setting</span>
+                                </Link>
                             </div>
                         </Menu>
                         {/* Sidebar Menu end here */}

@@ -30,6 +30,7 @@ import ProfilePage from './app/modules/profile/ProfilePage';
 import TestPage from './app/modules/profile/TestPage';
 import ClockingIdSetting from './app/pages/SettingPages/ClockingIdSetting';
 import { EmployeeRateAndCustomFieldsSetting } from './app/pages/SettingPages/EmployeeRateAndCustomerFIeldSetting';
+import UserSetting from './app/pages/SettingPages/UserSetting';
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
                     <Route path="/overtime-rule-setting" element={<PrivateRoute element={OvertimeRuleSetting} />}></Route>
                     <Route path="/working-rule-setting" element={<PrivateRoute element={WorkingRuleSetting} />}></Route>
                     <Route path="/allowance-rule-setting" element={<PrivateRoute element={AllowanceRuleSetting} />}></Route>
+                    <Route path="/user-setting" element={<PrivateRoute element={UserSetting} />}></Route>
                 </Routes>
                 <ToastContainer />
             </Router>
